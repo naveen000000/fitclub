@@ -1,0 +1,140 @@
+/* General styles for the Reasons component */
+.Reasons {
+  padding: 0 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+/* Styles for the left section containing images */
+.left-r {
+  flex: 1 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  grid-auto-rows: 1fr;
+}
+
+.left-r > img {
+  object-fit: cover;
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 15px; /* Curved edges for all images */
+}
+
+/* Specific styles for each nth-child image */
+.left-r > :nth-child(1) {
+  width: 13rem;
+  height: 21rem;
+}
+
+.left-r > :nth-child(2) {
+  width: auto;
+  height: 21rem;
+}
+
+.left-r > :nth-child(3) {
+  height: 21rem;
+  width: auto;
+}
+
+/* Hover effects for each nth-child image */
+.left-r > :nth-child(1):hover {
+  transform: scale(1.05); /* Slightly enlarge image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.left-r > :nth-child(2):hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-r > :nth-child(3):hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the right section containing text and partners */
+.right-r {
+  flex: 1;
+  text-transform: uppercase;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-r > span {
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.right-r > div {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.details-r {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details-r > div {
+  display: flex;
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.details-r > div > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.partners {
+  display: flex;
+  gap: 1rem;
+}
+
+.partners > img {
+  width: 5rem;
+  height: 4rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  border-radius: 10px; /* Curved edges for partner images */
+}
+
+/* Hover effects for partner images */
+.partners > img:hover {
+  transform: scale(1.1); /* Slightly enlarge image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Responsive design for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .Reasons {
+    flex-direction: column;
+  }
+
+  .left-r {
+    grid-auto-rows: auto;
+    overflow: hidden;
+  }
+
+  .left-r > :nth-child(1) {
+    width: 7rem;
+    height: 17rem;
+  }
+
+  .left-r > :nth-child(2) {
+    width: 15rem;
+    height: 10rem;
+  }
+
+  .left-r > :nth-child(3) {
+    width: 7rem;
+  }
+
+  .left-r > :nth-child(4) {
+    width: 7rem;
+    height: 6rem;
+  }
+}

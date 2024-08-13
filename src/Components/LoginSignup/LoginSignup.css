@@ -1,0 +1,118 @@
+/* Container for the entire login/signup section */
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #757474, #737272);
+  padding: 20px;
+}
+
+/* Container for the form */
+.form-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+/* Form title */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.75rem;
+}
+
+/* Input box styling */
+.inputbox {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.inputbox input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: #f9f9f9;
+}
+
+.inputbox input:focus,
+.inputbox input:hover {
+  border-color: #ff416c;
+  background: #fff;
+  outline: none;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s;
+  color: #999;
+}
+
+.inputbox input:focus + label,
+.inputbox input:not(:placeholder-shown) + label {
+  top: -0.75rem;
+  left: 1.25rem;
+  font-size: 0.75rem;
+  color: #ff416c;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff416c;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Form button styling */
+#form-button {
+  background-color: #ff416c;
+  color: #ffffff;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  font-size: 1rem;
+}
+
+#form-button:hover {
+  background-color: #ff4b2b;
+}
+
+/* Toggle button styling */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #ff416c;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.toggle-button:hover {
+  color: #ff4b2b;
+}
+
+/* Success message styling */
+.success-message {
+  color: #4caf50;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
